@@ -1,0 +1,9 @@
+# ignore ALL files in ANY directory named datasets
+datasets/
+
+
+# ignore ALL files in ANY directory named lightning_logs
+lightning_logs/
+
+# ignore ALL files in ANY directory named logs
+logs
