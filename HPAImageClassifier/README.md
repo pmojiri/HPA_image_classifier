@@ -51,13 +51,13 @@ The goal is predicting protein organelle localization labels for each sample. Th
 26.  Cytoplasmic bodies   
 27.  Rods & rings
     
-#### File descriptions\
+#### File descriptions:
 train.csv:  filenames and labels for the training set.\
 sample_submission.csv:  filenames for the test set, and a guide to constructing a working submission.\
 train.zip:  All images for the training set\
 test.zip:  All images for the test set.
 
-#### Data fields\
+#### Data fields:
 Id - the base filename of the sample. As noted above all samples consist of four files - blue, green, red, and yellow.\
 Target - in the training data, this represents the labels assigned to each sample.
 
