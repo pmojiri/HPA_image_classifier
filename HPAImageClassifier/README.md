@@ -64,3 +64,4 @@ Target - in the training data, this represents the labels assigned to each sampl
 ## Model
 
 ## Results
+Trained *resnet18* on epochs. These are the results on validation dataset:
