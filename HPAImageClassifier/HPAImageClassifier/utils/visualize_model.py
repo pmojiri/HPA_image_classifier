@@ -10,7 +10,7 @@ from torchvision.utils import make_grid
 from HPAImageClassifier.HPAImageClassifier.config.config import DatasetConfig, LogsConfig, ModelTrainingConfig
 from HPAImageClassifier.HPAImageClassifier.data.DataModule import HPADataModule
 from HPAImageClassifier.HPAImageClassifier.model.model import get_model
-from HPAImageClassifier.HPAImageClassifier.utils.utils import denormalize
+from HPAImageClassifier.HPAImageClassifier.utils.utils import de_normalize
 
 data_module = HPADataModule(num_classes=DatasetConfig.NUM_CLASSES, batch_size=32, num_workers=0)
 
@@ -39,7 +39,7 @@ logging.info(model_info)
 valid_loader = data_module.val_dataloader()
 plt.figure(figsize=(15, 15))
 for X, y in valid_loader:
-    images = denormalize(X, mean=DatasetConfig.MEAN, std=DatasetConfig.STD).permute(0, 2, 3, 1).numpy()
+    images = de_normalize(X, mean=DatasetConfig.MEAN, std=DatasetConfig.STD).permute(0, 2, 3, 1).numpy()
     targets = y.numpy()
 
     for i in range(1, 26):
@@ -65,7 +65,7 @@ data_module.resize_to = (128, 128)
 valid_loader = data_module.val_dataloader()
 
 batch = next(iter(valid_loader))
-images = denormalize(batch[0], mean=DatasetConfig.MEAN, std=DatasetConfig.STD)
+images = de_normalize(batch[0], mean=DatasetConfig.MEAN, std=DatasetConfig.STD)
 plt.figure(figsize=(32, 32))
 grid_img = make_grid(images, nrow=22, padding=5, pad_value=1.0)
 

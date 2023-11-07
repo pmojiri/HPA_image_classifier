@@ -16,7 +16,7 @@ from HPAImageClassifier.HPAImageClassifier.model.ModelModule import HPAModelModu
 sys.path.append(os.getcwd())
 
 # Seed everything for reproducibility.
-pl.seed_everything(2, workers=True)
+pl.seed_everything(42, workers=True)
 
 
 def parse_args():

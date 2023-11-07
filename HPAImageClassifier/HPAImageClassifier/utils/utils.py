@@ -31,8 +31,8 @@ def decode_target(
     return " ".join(result)
 
 
-def denormalize(tensors: torch.Tensor(), mean: tuple, std: tuple) -> torch.Tensor():
-    """Denormalizes image tensors using mean and std provided
+def de_normalize(tensors: torch.Tensor(), mean: tuple, std: tuple) -> torch.Tensor():
+    """De normalizes image tensors using mean and std provided
     and clip values between 0 and 1
     This function is used for reversing the Normalization step perform during image preprocessing.
     Note the mean and std values must match the ones used."""

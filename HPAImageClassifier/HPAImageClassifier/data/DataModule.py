@@ -103,7 +103,7 @@ class HPADataModule(pl.LightningDataModule):
 
     def setup(self, stage=None):
         """Split data into train, validation and test sets"""
-        np.random.seed(2)
+        np.random.seed(42)
         data_df = pd.read_csv(DatasetConfig.TRAIN_CSV)
         msk = np.random.rand(len(data_df)) < (1.0 - self.valid_percentage)
         train_df = data_df[msk].reset_index()
