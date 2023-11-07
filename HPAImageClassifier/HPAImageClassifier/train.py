@@ -18,6 +18,9 @@ sys.path.append(os.getcwd())
 # Seed everything for reproducibility.
 pl.seed_everything(42, workers=True)
 
+torch.set_float32_matmul_precision('high')
+os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":16:8"
+
 
 def parse_args():
     """Parse command line arguments."""
