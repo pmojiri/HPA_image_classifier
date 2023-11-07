@@ -3,7 +3,7 @@
 Classify subcellular protein patterns in human cells
 
 This is a project for the [Human Protein Atlas Image Classification](https://www.kaggle.com/c/human-protein-atlas-image-classification) competition on Kaggle.
-![sample](sample.png)
+![sample](docs/medical_images.png)
 
 ## Introduction
 
